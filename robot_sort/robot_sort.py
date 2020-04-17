@@ -97,7 +97,36 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        # set robot's starting index (e.g. start_index = 0)
+        # Look for the smallest value in the list
+        # send the robot to that value's index
+        # have the robot pick up the value
+        # send the robot back to its start_index
+        # have the robot swap items
+        # increment the start_index
+        # move the robot to that new start_index
+        # repeat process
+        for i in range(0, len(self._list) - 1):
+            start_index = 0
+            smallest_index = start_index
+
+            for x in range(start_index, len(self._list) - 1):
+                if None or self._list[x] < self._list[smallest_index]:
+                    smallest_index = x
+
+            moves_right = smallest_index - start_index
+            moves_left = smallest_index - start_index
+
+            while moves_right > 0:
+                self.move_right()
+                moves_right -= 1
+
+            self.swap_item()
+
+            while moves_left > 0:
+                self.move_left()
+                moves_left -= 1
+
 
 
 if __name__ == "__main__":
