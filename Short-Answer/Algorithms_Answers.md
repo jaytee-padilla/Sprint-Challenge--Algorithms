@@ -2,13 +2,13 @@
 
 ## Exercise I
 
-a) Constant O(n). As the size of the input increases, the runtime or space used will grow at the same rate. n remains the same value, only a's value if affected.
+a) O(n). The larger a's value is, the bigger the time complexity
 
 
-b) Polynomial O(n log n). The while loop nested in the for loop means 2 loops are happening for each element based on n's value.
+b) O(n log n). O(n) because of the for loop. O(log n) because j's value is doubled everytime the while loop is iterated (thereby cutting the time complexity of the while loop in half every iteration).
 
 
-c) Exponential O(n). The recursion triggers based on n (bunnies)
+c) O(n). The recursion triggers based on the size of n (bunnies)
 
 ## Exercise II
 1. Split the value of n in half
