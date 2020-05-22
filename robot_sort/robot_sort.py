@@ -96,36 +96,21 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        # set robot's starting index (e.g. start_index = 0)
-        # Look for the smallest value in the list
-        # send the robot to that value's index
-        # have the robot pick up the value
-        # send the robot back to its start_index
-        # have the robot swap items
-        # increment the start_index
-        # move the robot to that new start_index
-        # repeat process
-        for i in range(0, len(self._list) - 1):
-            start_index = 0
-            smallest_index = start_index
+        # Fill this out:
+        # Robot starts at first index of list
+        # pick up the current index's value
+        # move to the right (if possible)
+        # compare values
+        # if the value being compared to is smaller than the value the robot is holding, swap items
+        # repeat line 102 to 104 until reaching the end of the list (robot can't move right)
+        # once the end of the list is reached, return to the index the robot started at (aka, where a value of 'None' is currently stored) and swap items
+        # at that point, that one value has been sorted
 
-            for x in range(start_index, len(self._list) - 1):
-                if None or self._list[x] < self._list[smallest_index]:
-                    smallest_index = x
+        # the robot's starting index should increment by 1
+        # repeat line 101 to 107
 
-            moves_right = smallest_index - start_index
-            moves_left = smallest_index - start_index
-
-            while moves_right > 0:
-                self.move_right()
-                moves_right -= 1
-
-            self.swap_item()
-
-            while moves_left > 0:
-                self.move_left()
-                moves_left -= 1
+        # when the last element of the list has become the starting element, the entire list has been traversed and sorted
+        # another way of saying/doing this, if this robot's light is on AND the robot is carrying 'None' AND can_move_right returns false, the list has been sorted and the robot's light should now turn off 
 
 
 
